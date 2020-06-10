@@ -10,20 +10,20 @@ function getRandomInteger (minimum, maximum) {
   return Math.floor(Math.random() * (maximum - minimum)) + minimum
 }
 
-// Povided Arrays
-const nouns = ['dragons', 'toasters']
+// Provided Arrays
+const nouns = ['Don Draper', 'Peggy Olson', 'Roger Sterling', 'Pete Campbell', 'Joan Holloway', 'Betty Draper', 'Lane Pryce', 'Bert Cooper', 'Ken Cosgrove', 'Michael Ginsberg']
 
-const verbs = ['walked', 'ran']
+const verbs = ['announces', 'partners', 'loves', 'destroys', 'fights', 'frowns', 'presents', 'lies', 'looks', 'slinks']
 
-const adverbs = ['menacingly', 'intentionally']
+const adverbs = ['menacingly', 'intentionally', 'gruffly', 'guiltily', 'stoically', 'curtly', 'secretly', 'clumsily', 'obediently', 'powerfully']
 
-const adjectives = ['wild', 'slippery']
+const adjectives = ['wild', 'defiant', 'elegant', 'ingratiating', 'immature', 'depressed', 'repulsive', 'relieved', 'alcoholic', 'arrogant']
 
 const proNouns = ['they', 'we', 'you', 'he', 'she', 'I', 'it']
 
-const openings = ['Once upon a time', 'I watched']
+const openings = ['Once upon a time', 'I watched', 'It was only just the beginning', 'Who said', 'It was the best of times', 'There was an office', 'It was the beginning of the end', 'Under the dim lights', 'They walked in', 'Our story beings']
 
-const closings = ['with extra cheese', 'the end']
+const closings = ['if you don\’t like what\’s being said, change the conversation', 'the end', 'one never knows how loyalty is born', 'it was over', 'it had only just begun', 'it never really started', 'and then you realize it\'s just gone', 'just cash the cheques, you\'re going to die someday', 'it wasn\'t a lie, it was ineptitude with insufficient cover', 'the universe is indifferent']
 
 // Instructions:
 
