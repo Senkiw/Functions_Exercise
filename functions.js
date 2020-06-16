@@ -13,17 +13,81 @@ function getRandomInteger (minimum, maximum) {
 // Provided Arrays
 const nouns = ['Don Draper', 'Peggy Olson', 'Roger Sterling', 'Pete Campbell', 'Joan Holloway', 'Betty Draper', 'Lane Pryce', 'Bert Cooper', 'Ken Cosgrove', 'Michael Ginsberg']
 
-const verbs = ['announces', 'partners', 'loves', 'destroys', 'fights', 'frowns', 'presents', 'lies', 'looks', 'slinks']
+const verbs = ['announced', 'talked', 'loved', 'looked', 'fought', 'frowned', 'presented', 'lied', 'looked', 'said']
 
 const adverbs = ['menacingly', 'intentionally', 'gruffly', 'guiltily', 'stoically', 'curtly', 'secretly', 'clumsily', 'obediently', 'powerfully']
 
-const adjectives = ['wild', 'defiant', 'elegant', 'ingratiating', 'immature', 'depressed', 'repulsive', 'relieved', 'alcoholic', 'arrogant']
+const adjectives = ['wild', 'defiant', 'elegant', 'tired', 'immature', 'depressed', 'repulsed', 'relieved', 'alcoholic', 'arrogant']
 
-const proNouns = ['they', 'we', 'you', 'he', 'she', 'I', 'it']
+const proNouns = ['they', 'who']
 
-const openings = ['Once upon a time', 'I watched', 'It was only just the beginning', 'Who said', 'It was the best of times', 'There was an office', 'It was the beginning of the end', 'Under the dim lights', 'They walked in', 'Our story beings']
+const conjunctions = ['and', 'for', 'yet', 'so']
 
-const closings = ['if you don\’t like what\’s being said, change the conversation', 'the end', 'one never knows how loyalty is born', 'it was over', 'it had only just begun', 'it never really started', 'and then you realize it\'s just gone', 'just cash the cheques, you\'re going to die someday', 'it wasn\'t a lie, it was ineptitude with insufficient cover', 'the universe is indifferent']
+const openings = ['Once upon a time', 'I watched as', 'In the beginning', 'They said', 'Our story began as', 'There was an office where', 'It was the beginning of the end as', 'Under the dim lights', 'Suddenly', 'Under the bright office lights']
+
+const closings = ['if you don\’t like what\’s being said, change the conversation', 'they never really spoke', 'one never knows how loyalty is born', 'it was over', 'it had only just begun', 'it never really started', 'then you realize it\'s just gone', 'said just cash the cheques, you\'re going to die someday', 'it wasn\'t a lie, it was ineptitude with insufficient cover', 'we never found out what happened']
+
+/* Pseudo code:
+  
+  Add words to the array
+
+  1. Create a function that creates a random sentence
+    does this function require any parameters? no
+    does this function need to return anything? yes - new random sentence
+    how do you create a random sentence?
+
+  2. Create a function that outputs some text
+    does this function require parameters? yes - text to output
+    does this function need to return anything? no
+
+  3. Execute a loop 10 times
+    each cycle of the loop will create new random sentence and then output it
+*/
+
+function createRandomSentence () {
+  const randomSentence =
+    openings[getRandomInteger(0, openings.length - 1)]
+    + ' ' +
+    adjectives[getRandomInteger(0, adjectives.length - 1)]
+    + ' ' +
+    nouns[getRandomInteger(0, nouns.length - 1)]
+    + ' walked over to ' +
+    nouns[getRandomInteger(0, nouns.length - 1)]
+    + ' ' +
+    proNouns[getRandomInteger(0, proNouns.length - 1)]
+    + ' ' +
+    adverbs[getRandomInteger(0, adverbs.length - 1)]
+    + ' ' +
+    verbs[getRandomInteger(0, verbs.length - 1)]
+    + ', ' +
+    conjunctions[getRandomInteger(0, conjunctions.length - 1)]
+    + ' ' +
+    closings[getRandomInteger(0, closings.length - 1)]
+    + '.'
+
+  return randomSentence
+}
+
+function outputSentence (sentence) {
+  console.log(sentence)
+}
+
+const numberOfSentences = 10
+
+for (let i = 0; i < numberOfSentences; i++) {
+  outputSentence(createRandomSentence())
+}
+
+
+
+
+
+
+
+
+
+
+
 
 // Instructions:
 
@@ -39,6 +103,7 @@ const closings = ['if you don\’t like what\’s being said, change the convers
 // There should be a newline ("\n") both before and after the value is output
 // Name this function appropriately
 // Note this function does not return any value
+
 
 // Second function:
 // Create a function that builds a sentence using the 7 provided arrays
@@ -79,7 +144,7 @@ const closings = ['if you don\’t like what\’s being said, change the convers
 // this will result in your random sentence being output.
 
 // Other considerations:
-// Everyones code should be different
+// Everyone's code should be different
 // This is a fun exercise so... have fun!
 
 // Submission
